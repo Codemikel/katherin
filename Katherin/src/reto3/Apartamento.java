@@ -19,13 +19,15 @@ public class Apartamento {
         return "[Resumen]\n"+
                 "Apartamento: "+idApartamento+"\n"+
                 "Propietario: "+propietario+"\n"+
-                "Residentes: "+ Arrays.toString(residentes);
+                "Residentes:"+residentes.length;
     }
 
     public String verResidentes(){
+
         return "[Residentes]\n"+
                 "TipoDoc; Documento; Nombres; Apellidos\n"+
-                residentes.tipoDoc+";"+residentes.documento+";"+residentes.nombres+";"+residentes.apellidos;
+                residentes[0].toString()+"\n"+
+                residentes[1].toString();
     }
 
     public String getIdApartamento() {
@@ -42,10 +44,6 @@ public class Apartamento {
 
     public void setPropietario(String propietario) {
         this.propietario = propietario;
-    }
-
-    public Residente[] getResidentes() {
-        return residentes;
     }
 
     public void setResidentes(Residente[] residentes) {
