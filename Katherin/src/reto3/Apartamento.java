@@ -9,25 +9,25 @@ public class Apartamento {
     private String propietario;
     private Residente[] residentes;
 
-    public Apartamento(String idApartamento, String propietario, Residente[] residentes){
+    public Apartamento(String idApartamento, String propietario){
         this.idApartamento = idApartamento;
         this.propietario = propietario;
-        this.residentes = residentes;
     }
 
     public String verResumen(){
-        return "[Resumen]\n"+
+        System.out.println("[Resumen]\n"+
                 "Apartamento: "+idApartamento+"\n"+
                 "Propietario: "+propietario+"\n"+
-                "Residentes:"+residentes.length;
+                "Residentes:"+residentes.length);
+        return null;
     }
 
     public String verResidentes(){
-
-        return "[Residentes]\n"+
+        System.out.println("[Residentes]\n"+
                 "TipoDoc; Documento; Nombres; Apellidos\n"+
-                residentes[0].toString()+"\n"+
-                residentes[1].toString();
+                residentes[0]+"\n"+
+                residentes[1]);
+        return null;
     }
 
     public String getIdApartamento() {
@@ -44,6 +44,7 @@ public class Apartamento {
 
     public void setPropietario(String propietario) {
         this.propietario = propietario;
+
     }
 
     public void setResidentes(Residente[] residentes) {
